@@ -1,3 +1,3 @@
-#Projeto desenvolvido seguindo o modelo proposto no curso Django Master
+# Projeto desenvolvido seguindo o modelo proposto no curso Django Master
 
-**Site:**https://pycodebr.com.br/
+**Site:** https://pycodebr.com.br/
