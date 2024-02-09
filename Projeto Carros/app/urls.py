@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
 from cars.views import cars_view,new_car_view
-from account.views import register_user, login_user
+from account.views import register_user, login_user, logout_view
 
 
 urlpatterns = [
@@ -28,6 +28,7 @@ urlpatterns = [
     path('cars/', cars_view, name='cars_list'),
     path('new_car', new_car_view, name='new_car_view'),
     path('register', register_user ,name="register" ),
-    path('login', login_user, name='login_user')
+    path('login', login_user, name='login_user'),
+    path('logout', logout_view, name='logout')
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
