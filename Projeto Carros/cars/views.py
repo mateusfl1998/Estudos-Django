@@ -3,12 +3,9 @@ from cars.models import Car
 from cars.forms import CarModelForm
 from django.views import View
 
-def cars_view(request):
-    pass
 class CarView(View):
     
-    def get(self,request)
-
+    def get(self,request):
         cars = Car.objects.all()
         return render (    
         request,
