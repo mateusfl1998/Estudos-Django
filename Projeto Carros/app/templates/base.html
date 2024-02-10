@@ -73,8 +73,17 @@
     <nav>
       <ul>
         <li><a href="{% url 'cars_list' %}">Carros</a></li>
+      {% if user.is_authenticated %}
+        <li>Olá, {{ user.username }}</li>
         <li><a href="{% url 'new_car_view' %}">Adicionar Carros</a></li>
-      </ul>
+        <li><a href="{% url 'logout' %}">Sair</a></li>
+        {%endif%}
+        {% if not user.is_authenticated %}
+        <li><a href="{% url 'login_user' %}">Fazer login</a></li>
+        <li><a href="{% url 'register' %}">Cadastre-se</a></li>
+
+      {% endif %}
+      </ul>2
     </nav>
   </header>
 
