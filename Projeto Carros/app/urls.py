@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
-from cars.views import CarView, CarListView, NewCarCreateView
+from cars.views import CarView, CarListView, NewCarCreateView,CarDetailView
 from account.views import register_user, login_user, logout_view
 
 
@@ -29,6 +29,7 @@ urlpatterns = [
     path('new_car', NewCarCreateView.as_view(), name='new_car_view'),
     path('register', register_user ,name="register" ),
     path('login', login_user, name='login_user'),
-    path('logout', logout_view, name='logout')
+    path('logout', logout_view, name='logout'),
+    path('car/<int:pk>', CarDetailView.as_view(), name='car_detail')
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
