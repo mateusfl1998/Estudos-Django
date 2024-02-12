@@ -19,14 +19,14 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from django.http import HttpResponse
-from cars.views import CarView, NewCarView, CarListView
+from cars.views import CarView, CarListView, NewCarCreateView
 from account.views import register_user, login_user, logout_view
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cars/', CarListView.as_view(), name='cars_list'),
-    path('new_car', NewCarView.as_view(), name='new_car_view'),
+    path('new_car', NewCarCreateView.as_view(), name='new_car_view'),
     path('register', register_user ,name="register" ),
     path('login', login_user, name='login_user'),
     path('logout', logout_view, name='logout')
