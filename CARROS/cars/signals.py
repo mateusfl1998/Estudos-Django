@@ -27,5 +27,3 @@ def car_pre_save(sender, instance, **kwargs):
     if not instance.bio:
        message = 'Bio irá ser GERADA por Open iA (ChatGPT)'
        instance.bio = message
-    if not instance.photo:
-        instance.photo = '\media\cars\sem_foto.png'
