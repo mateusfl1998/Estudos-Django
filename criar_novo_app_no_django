@@ -1,0 +1,18 @@
+python manage.py starapp "nome do app"
+
+1 - COLOCAR O APP no Settings.py
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'app_learning',
+
+  2 - CRIAR URLs.PY
+  importar para dentro: from django.urls import path
+
+  
+  
